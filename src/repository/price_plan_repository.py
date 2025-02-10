@@ -4,6 +4,7 @@ from src.domain.smart_meter import SmartMeter
 from src.service.time_converter import time_elapsed_in_hours
 from functools import reduce
 
+
 def calculate_time_elapsed(readings):
     min_time = min(map(lambda r: r.time, readings))
     max_time = max(map(lambda r: r.time, readings))

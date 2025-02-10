@@ -12,6 +12,7 @@ MOST_EVIL_PRICE_PLAN_ID = "price-plan-0"
 RENEWBLES_PRICE_PLAN_ID = "price-plan-1"
 STANDARD_PRICE_PLAN_ID = "price-plan-2"
 
+
 def populate_smart_meters_with_readings():
     most_evil_price_plan = PricePlan(MOST_EVIL_PRICE_PLAN_ID, DR_EVILS_DARK_ENERGY_ENERGY_SUPPLIER, 10)
     renewbles_price_plan = PricePlan(RENEWBLES_PRICE_PLAN_ID, THE_GREEN_ECO_ENERGY_SUPPLIER, 2)

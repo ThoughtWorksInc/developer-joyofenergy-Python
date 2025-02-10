@@ -27,8 +27,11 @@ class TestMeterReadingManager(TestCase):
 
         self.repository.save.assert_called_with(
             "meter-45",
-            SmartMeter(None, electricity_readings=[
-                ElectricityReading({"time": iso_format_to_unix_time("2015-03-02T08:55:00"), "reading": 0.812}),
-                ElectricityReading({"time": iso_format_to_unix_time("2015-09-02T08:55:00"), "reading": 0.23}),
-            ]),
+            SmartMeter(
+                None,
+                electricity_readings=[
+                    ElectricityReading({"time": iso_format_to_unix_time("2015-03-02T08:55:00"), "reading": 0.812}),
+                    ElectricityReading({"time": iso_format_to_unix_time("2015-09-02T08:55:00"), "reading": 0.23}),
+                ],
+            ),
         )

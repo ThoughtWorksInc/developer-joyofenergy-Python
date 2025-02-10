@@ -9,8 +9,10 @@ from src.domain.electricity_reading import ElectricityReading
 def random_int_between(min_val, max_val):
     return "%02d" % random.randrange(min_val, max_val)
 
+
 def get_timedelta(sec=60):
     return datetime.timedelta(seconds=sec)
+
 
 def generate_electricity_readings(num):
     readings = []

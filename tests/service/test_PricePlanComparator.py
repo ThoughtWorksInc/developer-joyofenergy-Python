@@ -22,5 +22,7 @@ class TestPricePlanComparator(TestCase):
         smart_meter_id, limit = "smart-meter-100", 10
         price_plan_comparator.recommend_cheapest_price_plans(smart_meter_id, limit)
 
-        self.smart_meter_repository.find_by_id.assert_called_once_with(smart_meter_id)        
-        self.price_plan_repository.get_list_of_spend_against_each_price_plan_for.assert_called_once_with(dummy_smart_meter, limit)
+        self.smart_meter_repository.find_by_id.assert_called_once_with(smart_meter_id)
+        self.price_plan_repository.get_list_of_spend_against_each_price_plan_for.assert_called_once_with(
+            dummy_smart_meter, limit
+        )

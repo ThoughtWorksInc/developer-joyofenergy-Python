@@ -46,5 +46,7 @@ def recommend(
     smart_meter_repository = SmartMeterRepository()
     smart_meter = smart_meter_repository.find_by_id(smart_meter_id)
     price_plan_repository = PricePlanRepository()
-    list_of_spend_against_price_plans = price_plan_repository.get_list_of_spend_against_each_price_plan_for(smart_meter, limit)
+    list_of_spend_against_price_plans = price_plan_repository.get_list_of_spend_against_each_price_plan_for(
+        smart_meter, limit
+    )
     return list_of_spend_against_price_plans

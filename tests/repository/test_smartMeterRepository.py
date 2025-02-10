@@ -15,7 +15,7 @@ class TestSmartMeterRepository(TestCase):
             ElectricityReading({"time": 1507375234, "reading": 0.5}),
             ElectricityReading({"time": 1510053634, "reading": 0.75}),
         ]
-        smart_meter = SmartMeter(None, electricity_readings=readings) 
+        smart_meter = SmartMeter(None, electricity_readings=readings)
         self.repository.save(smart_meter_id, smart_meter)
         meter = self.repository.find_by_id(smart_meter_id)
         self.assertEqual(smart_meter, meter)

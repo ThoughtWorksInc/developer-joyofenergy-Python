@@ -22,6 +22,7 @@ def store(data: ElectricReading):
     meter_reading_manager.store_reading(data.model_dump(mode="json"))
     return data
 
+
 @router.get(
     "/read/{smart_meter_id}",
     response_model=List[Readings],
