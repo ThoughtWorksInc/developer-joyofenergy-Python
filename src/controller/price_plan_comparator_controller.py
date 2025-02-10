@@ -3,7 +3,7 @@ from typing import Dict, List
 
 from fastapi import APIRouter, HTTPException, Path, Query
 
-from ..service.account_service import AccountService
+from src.service.account_service import AccountService
 from src.repository.price_plan_repository import PricePlanRepository
 from src.repository.smart_meter_repository import SmartMeterRepository
 from .models import OPENAPI_EXAMPLES, PricePlanComparisons
